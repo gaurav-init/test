@@ -2,153 +2,122 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const stats = [
-  { label: "Experience", value: "Zanzee Company", icon: "💼" },
-  { label: "Coding Challenges", value: "1,000+ Solved", icon: "🏆" },
-  { label: "Primary Focus", value: "AI & Machine Learning", icon: "🧠" },
-  { label: "Science Exhibition", value: "2nd Rank", icon: "🥈" },
+  { label: "Experience", value: "Zanzee Co.", color: "bg-retro-yellow" },
+  { label: "DSA Challenges", value: "1,000+", color: "bg-retro-pink" },
+  { label: "Primary Focus", value: "AI & ML", color: "bg-retro-lime" },
+  { label: "Science Exhibition", value: "Rank 2", color: "bg-retro-blue" },
 ];
 
 const highlights = [
-  "B.Tech in CSE (AI & ML) from SAITM — 8.0 CGPA (2022–2026)",
-  "Deep Learning expertise with CNN, RNN & VGG16 Transfer Learning",
-  "Computer Vision projects using OpenCV & TensorFlow",
-  "Backend development with Flask, Django & RESTful APIs",
-  "1,000+ coding challenges on LeetCode, CodeStudio & CodeChef",
+  "B.Tech in CSE (AI & ML) — SAITM, 8.0 CGPA (2022–2026)",
+  "Deep Learning with CNN, RNN & VGG16 Transfer Learning",
+  "Computer Vision using OpenCV & TensorFlow",
+  "Backend: Flask, Django & RESTful APIs",
+  "1,000+ challenges across LeetCode, CodeStudio, CodeChef",
 ];
 
-const containerVariants = {
+const container = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.12 } },
+  visible: { transition: { staggerChildren: 0.08 } },
 };
 
-const itemVariants = {
-  hidden: { opacity: 0, x: -30 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } },
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
 const About = () => {
   return (
-    <section
-      id="about"
-      className="relative px-6 md:px-20 py-28 md:py-40 bg-black overflow-hidden"
-    >
-      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_left,rgba(199,120,221,0.15),transparent_40%)]" />
-      <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_bottom_right,rgba(168,85,247,0.12),transparent_40%)]" />
-      <motion.div
-        animate={{ rotate: 360 }}
-        transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-        className="absolute top-20 right-20 w-[300px] h-[300px] border border-dashed border-[#C778DD]/10 rounded-full pointer-events-none"
-      />
-
-      <div className="relative z-10 max-w-7xl mx-auto">
+    <section id="about" className="bg-retro-bg py-24 md:py-32 px-5 md:px-10">
+      <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="max-w-3xl mb-20"
+          transition={{ duration: 0.6 }}
+          className="max-w-3xl mb-16"
         >
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-5xl md:text-6xl font-extrabold text-white leading-tight"
-          >
-            Crafting <span className="text-[#C778DD]">Intelligent</span><br />
-            Systems & AI Solutions
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="mt-6 text-gray-400 text-lg leading-relaxed"
-          >
-            I'm <span className="text-[#C778DD] font-semibold">Saurabh</span>, an AI & ML Engineer with a strong focus on
-            <span className="text-white"> deep learning and computer vision</span>. I specialize in building
-            intelligent systems using <span className="text-white">Python, TensorFlow, OpenCV</span> and
-            <span className="text-white"> neural network architectures</span>. I enjoy turning raw data into reliable, production-ready
-            AI models with clean code and solid architecture.
-          </motion.p>
+          <span className="retro-eyebrow mb-5 inline-block">{"// About me"}</span>
+          <h2 className="retro-display text-4xl md:text-6xl leading-[1] mt-5">
+            Crafting{" "}
+            <span className="retro-mark">intelligent</span>
+            <br />
+            systems & AI solutions
+          </h2>
+          <p className="mt-6 text-lg text-retro-muted leading-relaxed">
+            I'm <span className="font-bold text-retro-ink">Saurabh</span>, an AI &
+            ML Engineer with a strong focus on deep learning and computer vision.
+            I build production-ready intelligent systems using Python, TensorFlow,
+            OpenCV and modern neural-network architectures.
+          </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-14 items-start">
+        <div className="grid lg:grid-cols-[1fr_1fr] gap-10 items-start">
+          {/* Highlights */}
           <motion.div
-            variants={containerVariants}
+            variants={container}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="space-y-5"
+            className="space-y-4"
           >
-            {highlights.map((item, index) => (
+            <div className="flex items-center gap-3 mb-5">
+              <span className="font-display text-sm uppercase tracking-widest bg-retro-yellow border-2 border-retro-ink px-3 py-1 rounded-full">
+                Highlights
+              </span>
+              <span className="h-[3px] flex-1 bg-retro-ink rounded-full" />
+            </div>
+            {highlights.map((line, i) => (
               <motion.div
-                key={index}
-                variants={itemVariants}
-                whileHover={{ x: 8, borderColor: "#C778DD" }}
-                className="flex items-start gap-4 bg-white/5 border border-white/10 rounded-xl p-5 backdrop-blur"
+                key={i}
+                variants={fadeUp}
+                className="retro-card p-5 flex items-start gap-4"
               >
-                <motion.span
-                  animate={{ scale: [1, 1.3, 1] }}
-                  transition={{ duration: 2, repeat: Infinity, delay: index * 0.2 }}
-                  className="mt-2 w-2 h-2 rounded-full bg-[#C778DD] flex-shrink-0"
+                <span className="inline-flex items-center justify-center w-8 h-8 bg-retro-pink border-2 border-retro-ink rounded-full font-display text-sm shrink-0">
+                  {i + 1}
+                </span>
+                <p className="text-retro-ink font-medium leading-relaxed">
+                  {line}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Stats grid */}
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-2 gap-5"
+          >
+            {stats.map((stat) => (
+              <motion.div
+                key={stat.label}
+                variants={fadeUp}
+                className="retro-card p-6 flex flex-col gap-3"
+              >
+                <span
+                  className={`inline-block w-10 h-10 ${stat.color} border-2 border-retro-ink  shadow-retro`}
                 />
-                <p className="text-gray-300 text-sm">{item}</p>
+                <h3 className="font-display text-2xl md:text-3xl leading-tight">
+                  {stat.value}
+                </h3>
+                <p className="font-mono text-xs uppercase tracking-widest text-retro-muted">
+                  {stat.label}
+                </p>
               </motion.div>
             ))}
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.85, rotate: -3 }}
-            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-            transition={{ duration: 0.8, type: "spring" }}
-            viewport={{ once: true }}
-            className="relative flex justify-center"
-          >
-            <motion.div
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 4, repeat: Infinity }}
-              className="absolute -inset-10 rounded-full bg-gradient-to-tr from-[#C778DD]/30 to-purple-500/20 blur-3xl"
-            />
-            <motion.img
-              whileHover={{ scale: 1.05, rotate: 2 }}
-              transition={{ type: "spring", stiffness: 200 }}
-              src="https://images.unsplash.com/photo-1515879218367-8466d910adef?w=500&q=80"
-              alt="AI Developer"
-              className="relative w-72 md:w-80 lg:w-96 object-contain rounded-2xl"
-            />
-          </motion.div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="space-y-5"
-          >
-            {stats.map((item, index) => (
-              <motion.div
-                key={index}
-                variants={{
-                  hidden: { opacity: 0, x: 30 },
-                  visible: { opacity: 1, x: 0, transition: { duration: 0.5, delay: index * 0.1 } },
-                }}
-                whileHover={{
-                  scale: 1.03,
-                  borderColor: "#C778DD",
-                  boxShadow: "0 0 25px rgba(199,120,221,0.2)",
-                }}
-                className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur"
-              >
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">{item.icon}</span>
-                  <h3 className="text-2xl font-bold text-white">
-                    {item.value}
-                  </h3>
-                </div>
-                <p className="text-gray-400 text-sm mt-2">{item.label}</p>
-              </motion.div>
-            ))}
+            <div className="col-span-2 retro-card p-6 bg-retro-yellow">
+              <p className="font-display text-xl md:text-2xl leading-tight">
+                "I don't just train models —
+                <br />I teach machines to see."
+              </p>
+              <p className="mt-3 font-mono text-xs uppercase tracking-widest">
+                — Saurabh Singh
+              </p>
+            </div>
           </motion.div>
         </div>
       </div>
