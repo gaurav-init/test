@@ -155,7 +155,7 @@ const ProjectCard = ({ title, images, github, live, tech }) => {
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
-      className="relative group cursor-pointer perspective-1000 mb-16"
+      className="relative group cursor-pointer perspective-1000 mb-16 card-retro"
     >
       <motion.div
         whileHover={{ rotateY: 10, rotateX: 5 }}
@@ -200,7 +200,7 @@ const ProjectCard = ({ title, images, github, live, tech }) => {
                 href={live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-[#C778DD]/70 hover:bg-[#C778DD] text-white rounded-md shadow-lg transition-all"
+                className="retro-btn"
               >
                 Live
               </a>
@@ -223,7 +223,7 @@ const ProjectCard = ({ title, images, github, live, tech }) => {
 const Projects = () => {
   return (
     <section id="projects" className="bg-[#1E1E1E] py-20 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6 lg:px-20">
+      <div className="max-w-6xl mx-auto px-6 lg:px-20 retro-window card-retro p-8">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -238,11 +238,11 @@ const Projects = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {projectData.map((project, idx) => (
-            <ProjectCard key={idx} {...project} />
-          ))}
-        </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              {projectData.map((project, idx) => (
+                <ProjectCard key={idx} {...project} />
+              ))}
+            </div>
       </div>
     </section>
   );
