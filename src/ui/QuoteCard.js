@@ -1,69 +1,36 @@
-// import React from "react";
-
-// const QuoteCard = () => {
-//   return (
-//     <div className="h-[20vh] flex items-center justify-center text-white font-mono">
-//       <div className="relative border border-gray-600 px-8 py-6 rounded-sm max-w-2xl">
-//         {/* Top-left quote mark */}
-//         {/* <span className="absolute -top-2  px-2 m-auto left-5 text-gray-400 text-3xl">“</span> */}
-//         {/* Quote text */}
-//         <p className="relative text-md lg:text-xl">
-//          I don't just train models, I teach machines to see.
-//         </p>
-
-//         {/* Bottom-right author box */}
-//         <div className="absolute -bottom-6 right-8 flex items-center space-x-2 bg-[#2b2f36] px-4 py-1 border border-gray-600 rounded-sm">
-//           <span className="text-gray-400 absolute  -mt-5 -ml-2 text-xl">”</span>
-//           <p className="text-gray-300 relative">Saurabh Singh</p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default QuoteCard;
 import React from "react";
 import { motion } from "framer-motion";
 
 const QuoteCard = () => {
   return (
-    <div className="h-[25vh] flex items-center justify-center px-4">
+    <section className="bg-retro-bg py-10 px-5 md:px-10 flex items-center justify-center">
       <motion.div
-        // whileHover={{ scale: 1.03, rotateZ: 1 }}
-        className="relative w-full max-w-2xl p-8 bg-gradient-to-br from-[#0f0f0f] to-[#1a1a1a] border border-[#C778DD]/30 rounded-2xl shadow-[0_0_30px_rgba(199,119,221,0.3)] backdrop-blur-sm"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="relative w-full max-w-3xl"
       >
-        {/* Top-left glowing quote mark */}
-        <motion.span
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="absolute -top-3 left-4  text-5xl text-[#C778DD] opacity-80"
-        >
-          “
-        </motion.span>
-
-        {/* Quote Text */}
-        <p className="text-white text-lg lg:text-xl font-mono leading-relaxed text-center">
-          I don't just train models, I teach machines to see.
-        </p>
-
-        {/* Bottom-right author */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="absolute -bottom-6 right-6 flex items-center gap-2 bg-[#2b2f36]/80 px-4 py-1 border border-[#C778DD]/30 rounded-md shadow-[0_0_15px_rgba(199,119,221,0.4)]"
-        >
-          <span className="text-[#C778DD] absolute -top-2 left-1 text-xl">”</span>
-          <p className="text-gray-300 font-semibold">Saurabh Singh</p>
-        </motion.div>
-
-        {/* Bottom subtle glow line */}
-        {/* <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#C778DD]/50 via-[#8b5cf6]/40 to-[#f472b6]/40 rounded-t-full animate-pulse"></div> */}
+        <div className="absolute -top-3 -left-3 w-full h-full bg-retro-pink border-2 border-retro-ink rounded-retro" />
+        <div className="relative retro-card bg-retro-yellow p-7 md:p-10">
+          <span className="absolute -top-4 left-6 font-display text-6xl leading-none">"</span>
+          <p className="font-display text-xl md:text-2xl leading-snug pl-2">
+            I don't just train models — I teach machines to{" "}
+            <span className="bg-retro-card border-2 border-retro-ink px-2 rounded-md">
+              see
+            </span>
+            .
+          </p>
+          <div className="mt-5 flex items-center gap-3">
+            <span className="inline-block w-3 h-3 bg-retro-ink rounded-full" />
+            <span className="font-mono text-sm uppercase tracking-widest">
+              Saurabh Singh
+            </span>
+          </div>
+        </div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 
 export default QuoteCard;
-
