@@ -1,0 +1,271 @@
+/* ============================================================
+   RetroUI Theme — tuned 1:1 with retroui.dev
+   Source values captured via Playwright inspection:
+     body bg #F5ECE7 · card #FFFFFF · ink #000
+     border 2px solid #000 · radius 0 · shadow 3px 3px 0 #000
+     heading Archivo Black UPPERCASE · body Space Grotesk
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  --retro-bg:        #f5ece7;
+  --retro-bg-soft:   #ece1d8;
+  --retro-card:      #ffffff;
+  --retro-ink:       #000000;
+  --retro-muted:     #4f4640;
+
+  --retro-yellow:    #ffd900;
+  --retro-pink:      #ff7eb6;
+  --retro-lime:      #bef264;
+  --retro-blue:      #7cd3ff;
+  --retro-orange:    #ff8a3d;
+  --retro-purple:    #c89bff;
+
+  --retro-border:    2px solid var(--retro-ink);
+  --retro-radius:    0px;
+  --retro-shadow:    3px 3px 0 0 var(--retro-ink);
+  --retro-shadow-md: 4px 4px 0 0 var(--retro-ink);
+  --retro-shadow-lg: 6px 6px 0 0 var(--retro-ink);
+}
+
+/* ---------- Page base ---------- */
+html, body, #root { height: 100%; }
+
+body {
+  background-color: var(--retro-bg);
+  color: var(--retro-ink);
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Subtle triangle / dot pattern overlay — recreates retroui.dev background */
+  background-image:
+    linear-gradient(30deg, rgba(0,0,0,0.045) 1px, transparent 1px),
+    linear-gradient(150deg, rgba(0,0,0,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.025) 1px, transparent 1px);
+  background-size: 40px 70px, 40px 70px, 40px 40px;
+  background-position: 0 0, 0 0, 0 0;
+}
+
+::selection {
+  background: var(--retro-yellow);
+  color: var(--retro-ink);
+}
+
+/* Reset old dark theme assumptions */
+.bg-black { background-color: var(--retro-bg) !important; color: var(--retro-ink) !important; }
+
+/* ---------- Typography ---------- */
+body, p, span, a, li, button, input, textarea, label, div {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Archivo Black', 'Space Grotesk', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.005em;
+  line-height: 1;
+  color: var(--retro-ink);
+}
+
+.retro-display {
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 0.95;
+}
+.retro-heading {
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+}
+.retro-mono {
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: none;
+}
+
+/* ---------- Card / surface ---------- */
+.retro-card {
+  background: var(--retro-card);
+  border: var(--retro-border);
+  border-radius: var(--retro-radius);
+  box-shadow: var(--retro-shadow);
+  color: var(--retro-ink);
+  transition: transform 0.14s ease, box-shadow 0.14s ease;
+}
+.retro-card-flat {
+  background: var(--retro-card);
+  border: var(--retro-border);
+  border-radius: var(--retro-radius);
+  color: var(--retro-ink);
+}
+.retro-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 0 var(--retro-ink);
+}
+.retro-panel {
+  background: var(--retro-bg-soft);
+  border: var(--retro-border);
+  border-radius: var(--retro-radius);
+}
+
+/* ---------- Buttons ---------- */
+.retro-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  background: var(--retro-yellow);
+  color: var(--retro-ink);
+  border: var(--retro-border);
+  border-radius: var(--retro-radius);
+  box-shadow: var(--retro-shadow);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.retro-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 0 var(--retro-ink);
+}
+.retro-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 0 var(--retro-ink);
+}
+.retro-btn--white  { background: #ffffff; }
+.retro-btn--pink   { background: var(--retro-pink); }
+.retro-btn--lime   { background: var(--retro-lime); }
+.retro-btn--blue   { background: var(--retro-blue); }
+.retro-btn--orange { background: var(--retro-orange); }
+.retro-btn--ghost  { background: transparent; box-shadow: none; border: var(--retro-border); }
+.retro-btn--ghost:hover { background: var(--retro-bg-soft); box-shadow: var(--retro-shadow); }
+
+/* ---------- Chips / badges ---------- */
+.retro-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  background: var(--retro-card);
+  border: var(--retro-border);
+  border-radius: var(--retro-radius);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--retro-ink);
+}
+.retro-chip--yellow { background: var(--retro-yellow); }
+.retro-chip--pink   { background: var(--retro-pink); }
+.retro-chip--lime   { background: var(--retro-lime); }
+.retro-chip--blue   { background: var(--retro-blue); }
+
+.retro-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: var(--retro-yellow);
+  border: var(--retro-border);
+  border-radius: var(--retro-radius);
+  box-shadow: var(--retro-shadow);
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ---------- Section header eyebrow ---------- */
+.retro-eyebrow {
+  display: inline-block;
+  padding: 6px 14px;
+  background: var(--retro-card);
+  border: var(--retro-border);
+  border-radius: var(--retro-radius);
+  box-shadow: var(--retro-shadow);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ---------- Inline highlight mark (retroui.dev's "LOOK" treatment) ---------- */
+.retro-mark {
+  background: var(--retro-yellow);
+  border: var(--retro-border);
+  border-radius: var(--retro-radius);
+  padding: 0 10px;
+  margin: 0 2px;
+  display: inline-block;
+  line-height: 1.05;
+  box-shadow: 3px 3px 0 0 var(--retro-ink);
+}
+.retro-mark--pink { background: var(--retro-pink); }
+.retro-mark--lime { background: var(--retro-lime); }
+.retro-mark--blue { background: var(--retro-blue); }
+
+/* Outlined display text (used on big stat numbers like 1.5K+ on retroui.dev) */
+.retro-stroke {
+  color: var(--retro-bg);
+  -webkit-text-stroke: 4px var(--retro-ink);
+  font-family: 'Archivo Black', sans-serif;
+}
+
+/* ---------- Inputs ---------- */
+.retro-input,
+.retro-textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  background: var(--retro-card);
+  color: var(--retro-ink);
+  border: var(--retro-border);
+  border-radius: var(--retro-radius);
+  outline: none;
+  box-shadow: var(--retro-shadow);
+  transition: box-shadow 0.12s ease, transform 0.12s ease;
+}
+.retro-input::placeholder,
+.retro-textarea::placeholder { color: #99908a; }
+.retro-input:focus,
+.retro-textarea:focus {
+  box-shadow: 5px 5px 0 0 var(--retro-ink);
+  transform: translate(-2px, -2px);
+}
+
+/* ---------- Nav link ---------- */
+.retro-link {
+  position: relative;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--retro-ink);
+  padding: 6px 12px;
+  border-radius: var(--retro-radius);
+  text-decoration: none;
+  transition: background 0.12s ease;
+}
+.retro-link:hover { background: var(--retro-yellow); border: 2px solid var(--retro-ink); padding: 4px 10px; }
+
+/* ---------- Misc ---------- */
+.retro-divider { height: 2px; background: var(--retro-ink); }
+.cursor-target { cursor: pointer; }
+
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: var(--retro-bg-soft); }
+::-webkit-scrollbar-thumb {
+  background: var(--retro-ink);
+  border: 2px solid var(--retro-bg-soft);
+}
+
+@media (max-width: 768px) {
+  .retro-btn { padding: 9px 16px; font-size: 12px; }
+}
