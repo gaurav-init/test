@@ -1,95 +1,96 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+
+const links = [
+  { name: "GitHub", href: "https://github.com/saurabhsingh8xm", Icon: FaGithub },
+  { name: "LinkedIn", href: "https://linkedin.com/in/saurabhsingh8xm", Icon: FaLinkedin },
+  { name: "Email", href: "mailto:saurabhsingh8xm@gmail.com", Icon: FaEnvelope },
+];
 
 const Footer = () => {
   return (
-    <footer className="relative bg-[#0E0E11] text-white overflow-hidden">
-
-      <div className="absolute inset-0 pointer-events-none">
-        <motion.div
-          animate={{ opacity: [0.15, 0.3, 0.15], scale: [1, 1.1, 1] }}
-          transition={{ duration: 5, repeat: Infinity }}
-          className="absolute -top-32 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-[#C778DD]/20 blur-[120px]"
-        />
+    <footer className="bg-retro-ink text-retro-bg">
+      {/* Top CTA strip */}
+      <div className="bg-retro-yellow text-retro-ink border-t-2 border-b-2 border-retro-ink py-10 px-5 md:px-10">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div>
+            <h3 className="font-display text-2xl md:text-4xl leading-tight">
+              Got an idea?
+              <br />
+              Let's <span className="bg-retro-pink border-2 border-retro-ink px-2 rounded-md shadow-retro inline-block">build it.</span>
+            </h3>
+          </div>
+          <a href="#contact" className="retro-btn retro-btn--white shrink-0">
+            Start a Conversation →
+          </a>
+        </div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-16">
-        <motion.div
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="h-px w-full bg-gradient-to-r from-transparent via-[#C778DD]/40 to-transparent origin-center"
-        />
+      {/* Footer body */}
+      <div className="max-w-7xl mx-auto px-5 md:px-10 py-14 grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div>
+          <div className="flex items-center gap-3 mb-4">
+            <span className="inline-flex items-center justify-center w-10 h-10 bg-retro-yellow border-2 border-retro-bg  font-display text-lg text-retro-ink">
+              S
+            </span>
+            <span className="font-display text-xl">
+              SAURABH<span className="text-retro-pink">.</span>
+            </span>
+          </div>
+          <p className="text-sm leading-relaxed opacity-80">
+            AI & ML engineer building intelligent systems with deep learning,
+            computer vision and clean backend architecture.
+          </p>
+        </div>
+
+        <div>
+          <h4 className="font-display uppercase text-sm tracking-widest mb-4 text-retro-yellow">
+            Navigate
+          </h4>
+          <ul className="space-y-2 text-sm">
+            {["About", "Projects", "Workflow", "Contact"].map((l) => (
+              <li key={l}>
+                <a href={`#${l.toLowerCase()}`} className="hover:text-retro-yellow transition">
+                  → {l}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="font-display uppercase text-sm tracking-widest mb-4 text-retro-yellow">
+            Connect
+          </h4>
+          <div className="flex gap-3">
+            {links.map(({ name, href, Icon }) => (
+              <a
+                key={name}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={name}
+                className="inline-flex items-center justify-center w-12 h-12 bg-retro-bg text-retro-ink border-2 border-retro-bg  hover:bg-retro-yellow transition"
+              >
+                <Icon size={18} />
+              </a>
+            ))}
+          </div>
+          <p className="mt-4 font-mono text-xs uppercase tracking-widest text-retro-yellow">
+            Open for conversations
+          </p>
+        </div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-14 text-center">
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-sm sm:text-base md:text-lg text-gray-400 leading-relaxed"
-        >
-          I'd <span className="text-[#C778DD] font-medium">love</span> to hear
-          from you. Whether it's an AI project, a collaboration, or just a hello —
-          <br className="hidden sm:block" />
-          <span className="text-white">
-            drop a message and let's build something intelligent together.
-          </span>
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, type: "spring" }}
-          className="mt-8 flex justify-center gap-6"
-        >
-          {[
-            { name: "GitHub", href: "https://github.com/saurabhsingh8xm" },
-            { name: "LinkedIn", href: "https://linkedin.com/in/saurabhsingh8xm" },
-            { name: "Email", href: "mailto:saurabhsingh8xm@gmail.com" },
-          ].map((link) => (
-            <motion.a
-              key={link.name}
-              whileHover={{ scale: 1.1, color: "#C778DD" }}
-              whileTap={{ scale: 0.95 }}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-gray-400 hover:text-[#C778DD] transition border border-white/10 px-4 py-2 rounded-full"
-            >
-              {link.name}
-            </motion.a>
-          ))}
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
-          className="mt-6 text-xs uppercase tracking-widest text-[#C778DD]"
-        >
-          Open for conversations
-        </motion.div>
-      </div>
-
-      <div className="relative z-10 bg-black/40 backdrop-blur border-t border-white/5">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span className="text-xs text-gray-500">
-            © {new Date().getFullYear()} Saurabh Singh • All rights reserved
-          </span>
-
-          <motion.span
-            animate={{ opacity: [0.5, 1, 0.5] }}
-            transition={{ duration: 3, repeat: Infinity }}
-            className="text-xs text-gray-500"
-          >
-            Crafted with focus & intent
-          </motion.span>
+      {/* Bottom bar */}
+      <div className="border-t-2 border-retro-bg/20">
+        <div className="max-w-7xl mx-auto px-5 md:px-10 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+          <p className="font-mono text-xs opacity-70">
+            © {new Date().getFullYear()} Saurabh Singh — all rights reserved.
+          </p>
+          <p className="font-mono text-xs opacity-70">
+            crafted with focus & intent.
+          </p>
         </div>
       </div>
     </footer>
