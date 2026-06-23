@@ -1,0 +1,501 @@
+{
+  "bodyStyles": {
+    "background": "rgb(245, 236, 231)",
+    "color": "rgb(0, 0, 0)",
+    "fontFamily": "\"Space Grotesk\", \"Space Grotesk Fallback\""
+  },
+  "headings": [
+    {
+      "tag": "h1",
+      "id": null,
+      "classes": [
+        "font-head",
+        "font-bold",
+        "uppercase",
+        "text-5xl",
+        "lg:text-6xl"
+      ],
+      "text": "NOT EVERY WEBSITE HAS TO\nLK THE SAME!"
+    },
+    {
+      "tag": "h2",
+      "id": null,
+      "classes": [
+        "font-head",
+        "font-semibold",
+        "uppercase",
+        "text-4xl",
+        "lg:text-5xl"
+      ],
+      "text": "DESIGNED TO SHIP FAST\nWITHOUT LOOKING BORING"
+    },
+    {
+      "tag": "h3",
+      "id": null,
+      "classes": [
+        "font-head",
+        "text-2xl",
+        "font-medium",
+        "mb-4"
+      ],
+      "text": "Copy-paste or just use your CLI"
+    },
+    {
+      "tag": "h3",
+      "id": null,
+      "classes": [
+        "font-head",
+        "text-2xl",
+        "font-medium",
+        "mb-4"
+      ],
+      "text": "Fully customizable"
+    },
+    {
+      "tag": "h3",
+      "id": null,
+      "classes": [
+        "font-head",
+        "text-2xl",
+        "font-medium",
+        "mb-4"
+      ],
+      "text": "Integrate with your favorite tech stack"
+    },
+    {
+      "tag": "h3",
+      "id": null,
+      "classes": [
+        "font-head",
+        "text-2xl",
+        "font-medium",
+        "mb-4"
+      ],
+      "text": "MCP server support with Shadcn"
+    },
+    {
+      "tag": "h2",
+      "id": null,
+      "classes": [
+        "font-head",
+        "font-semibold",
+        "uppercase",
+        "text-4xl",
+        "lg:text-5xl"
+      ],
+      "text": "NEO BRUTALIST UI\n\nCOMPONENTS"
+    },
+    {
+      "tag": "h2",
+      "id": null,
+      "classes": [
+        "font-head",
+        "font-semibold",
+        "uppercase",
+        "text-4xl",
+        "lg:text-5xl"
+      ],
+      "text": "BUILD FASTER WITH 200+\n\nBLOCKS"
+    },
+    {
+      "tag": "h2",
+      "id": null,
+      "classes": [
+        "font-head",
+        "font-semibold",
+        "uppercase",
+        "text-4xl",
+        "lg:text-5xl"
+      ],
+      "text": "PRE-BUILT AND CUSTOMIZABLE\n\nTEMPLATES"
+    },
+    {
+      "tag": "h2",
+      "id": null,
+      "classes": [
+        "font-head",
+        "font-semibold",
+        "uppercase",
+        "text-4xl",
+        "lg:text-5xl"
+      ],
+      "text": "LOVED BY DEVS, DESIGNERS\n& CREATORS"
+    },
+    {
+      "tag": "h3",
+      "id": null,
+      "classes": [
+        "font-medium",
+        "text-black"
+      ],
+      "text": "Ziv Reich"
+    },
+    {
+      "tag": "h3",
+      "id": null,
+      "classes": [
+        "font-medium",
+        "text-black"
+      ],
+      "text": "Zhengyang Hou"
+    },
+    {
+      "tag": "h3",
+      "id": null,
+      "classes": [
+        "font-medium",
+        "text-black"
+      ],
+      "text": "Paul Bratslavsky"
+    },
+    {
+      "tag": "h3",
+      "id": null,
+      "classes": [
+        "font-medium",
+        "text-black"
+      ],
+      "text": "Taseen Tanvir"
+    },
+    {
+      "tag": "h3",
+      "id": null,
+      "classes": [
+        "font-medium",
+        "text-black"
+      ],
+      "text": "Cameron Blackwood"
+    },
+    {
+      "tag": "h3",
+      "id": null,
+      "classes": [
+        "font-medium",
+        "text-black"
+      ],
+      "text": "Nitesh Padghan"
+    },
+    {
+      "tag": "h3",
+      "id": null,
+      "classes": [
+        "font-head",
+        "font-medium",
+        "mb-8",
+        "text-6xl",
+        "lg:text-7xl",
+        "[-webkit-text-stroke:6px_var(--foreground)]"
+      ],
+      "text": "1.5K+"
+    },
+    {
+      "tag": "h3",
+      "id": null,
+      "classes": [
+        "font-head",
+        "font-medium",
+        "mb-8",
+        "text-6xl",
+        "lg:text-7xl",
+        "[-webkit-text-stroke:6px_var(--foreground)]"
+      ],
+      "text": "120+"
+    },
+    {
+      "tag": "h2",
+      "id": null,
+      "classes": [
+        "font-head",
+        "font-semibold",
+        "mb-8",
+        "text-6xl",
+        "lg:text-7xl",
+        "[-webkit-text-stroke:6px_var(--foreground)]"
+      ],
+      "text": "250+"
+    },
+    {
+      "tag": "h3",
+      "id": null,
+      "classes": [
+        "text-2xl",
+        "font-medium",
+        "lg:text-3xl",
+        "font-head"
+      ],
+      "text": "RetroUI"
+    }
+  ],
+  "sections": [
+    {
+      "tag": "section",
+      "id": null,
+      "classes": [
+        "bg-[url('/decor/bg-triangle-pattern.svg')]",
+        "bg-cover",
+        "bg-center"
+      ],
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "firstChildText": "NOT EVERY WEBSITE HAS TO\nLK THE SAME!\n\nA bold, modern React + TailwindCSS UI library that makes your projects stand out "
+    },
+    {
+      "tag": "div",
+      "id": null,
+      "classes": [
+        "relative",
+        "h-[500px]",
+        "overflow-hidden"
+      ],
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "firstChildText": ""
+    },
+    {
+      "tag": "section",
+      "id": null,
+      "classes": [
+        "container",
+        "mx-auto",
+        "px-4",
+        "py-28",
+        "space-y-14"
+      ],
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "112px 16px",
+      "firstChildText": "DESIGNED TO SHIP FAST\nWITHOUT LOOKING BORING\n\nAn ecosystem tailored for developers, featuring a reliable framework, reus"
+    },
+    {
+      "tag": "section",
+      "id": null,
+      "classes": [
+        "container",
+        "mx-auto",
+        "px-4",
+        "py-28",
+        "space-y-14"
+      ],
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "112px 16px",
+      "firstChildText": "NEO BRUTALIST UI\n\nCOMPONENTS\n\nDiscover scalable Shadcn UI components designed with Base UI and Radix UI, perfect for lan"
+    },
+    {
+      "tag": "section",
+      "id": null,
+      "classes": [
+        "container",
+        "mx-auto",
+        "px-4",
+        "py-28",
+        "space-y-14"
+      ],
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "112px 16px",
+      "firstChildText": "BUILD FASTER WITH 200+\n\nBLOCKS\n\nDiscover scalable Shadcn UI components designed with Base UI and Radix UI, perfect for l"
+    },
+    {
+      "tag": "section",
+      "id": null,
+      "classes": [
+        "container",
+        "mx-auto",
+        "px-4",
+        "py-28",
+        "space-y-14"
+      ],
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "112px 16px",
+      "firstChildText": "PRE-BUILT AND CUSTOMIZABLE\n\nTEMPLATES\nAll Templates\nBrutstack | Devtools landing page\n\nA modern dark themed landing page"
+    },
+    {
+      "tag": "section",
+      "id": null,
+      "classes": [
+        "container",
+        "mx-auto",
+        "px-4",
+        "py-28",
+        "space-y-14"
+      ],
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "112px 16px",
+      "firstChildText": "LOVED BY DEVS, DESIGNERS\n& CREATORS\n\nStumbled across your UI kit and grabbed it right away - only later checked your Twi"
+    },
+    {
+      "tag": "section",
+      "id": null,
+      "classes": [
+        "container",
+        "mx-auto",
+        "px-4",
+        "py-28"
+      ],
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "112px 16px",
+      "firstChildText": "GitHub Stars\n\n1.5K+\nStar on GitHub\n\nDiscord Members\n\n120+\nJoin Community\n\nFigma Users\n\n250+\nGet Free Kit"
+    },
+    {
+      "tag": "footer",
+      "id": null,
+      "classes": [
+        "mt-24",
+        "bg-card"
+      ],
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "firstChildText": "RetroUI\n\nThe platform for developers and designers who love unique, playful, and brutalist design.\n\nPRODUCT\nOS Component"
+    },
+    {
+      "tag": "section",
+      "id": null,
+      "classes": [],
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "firstChildText": ""
+    }
+  ],
+  "buttons": [
+    {
+      "text": "RetroUI",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "padding": "0px",
+      "fontFamily": "\"Archivo Black\", \"Archivo Black Fallback\"",
+      "fontWeight": "400"
+    },
+    {
+      "text": "Components",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "padding": "8px",
+      "fontFamily": "\"Space Grotesk\", \"Space Grotesk Fallback\"",
+      "fontWeight": "400"
+    },
+    {
+      "text": "Components",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "padding": "0px",
+      "fontFamily": "\"Space Grotesk\", \"Space Grotesk Fallback\"",
+      "fontWeight": "400"
+    },
+    {
+      "text": "Blocks",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "padding": "8px",
+      "fontFamily": "\"Space Grotesk\", \"Space Grotesk Fallback\"",
+      "fontWeight": "400"
+    },
+    {
+      "text": "Blocks",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "padding": "0px",
+      "fontFamily": "\"Space Grotesk\", \"Space Grotesk Fallback\"",
+      "fontWeight": "400"
+    },
+    {
+      "text": "Templates",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "padding": "8px",
+      "fontFamily": "\"Space Grotesk\", \"Space Grotesk Fallback\"",
+      "fontWeight": "400"
+    },
+    {
+      "text": "Templates",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "padding": "0px",
+      "fontFamily": "\"Space Grotesk\", \"Space Grotesk Fallback\"",
+      "fontWeight": "400"
+    },
+    {
+      "text": "Figma",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "padding": "8px",
+      "fontFamily": "\"Space Grotesk\", \"Space Grotesk Fallback\"",
+      "fontWeight": "400"
+    },
+    {
+      "text": "Figma",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "padding": "0px",
+      "fontFamily": "\"Space Grotesk\", \"Space Grotesk Fallback\"",
+      "fontWeight": "400"
+    },
+    {
+      "text": "Resources",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(0, 0, 0)",
+      "borderRadius": "8px",
+      "boxShadow": "none",
+      "padding": "6px 10px",
+      "fontFamily": "\"Space Grotesk\", \"Space Grotesk Fallback\"",
+      "fontWeight": "400"
+    },
+    {
+      "text": "",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "padding": "0px",
+      "fontFamily": "\"Space Grotesk\", \"Space Grotesk Fallback\"",
+      "fontWeight": "400"
+    },
+    {
+      "text": "",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "2px solid rgb(0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(0, 0, 0) 3px 3px 0px 0px",
+      "padding": "8px",
+      "fontFamily": "\"Archivo Black\", \"Archivo Black Fallback\"",
+      "fontWeight": "500"
+    }
+  ]
+}
